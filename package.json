@@ -1,6 +1,6 @@
 {
   "name": "@vroskus/library-swagger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Swagger",
   "author": "Vilius Roškus <vilius@regattas.eu>",
   "license": "MIT",
@@ -9,9 +9,6 @@
     "url": "git+https://github.com/vroskus/library-swagger.git"
   },
   "main": "dist/index.js",
-  "files": [
-    "dist/index.js"
-  ],
   "scripts": {
     "postinstall": "npm run build",
     "build": "tsc",
@@ -22,6 +19,7 @@
     "test:e2e:post": "jest-coverage-thresholds-bumper"
   },
   "dependencies": {
+    "@types/lodash": "4.14.192",
     "lodash": "4.17.21",
     "swagger-jsdoc": "6.2.8",
     "swagger-ui-express": "4.6.1"
