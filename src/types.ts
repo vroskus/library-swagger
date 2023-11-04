@@ -34,9 +34,9 @@ export type $SwaggerDefinition = {
   openapi?: string;
   swagger?: string;
   components?: {
-    securitySchemes?: object;
+    securitySchemes?: Record<string, unknown>;
   };
-  security?: Array<object>;
+  security?: Array<Record<string, unknown>>;
   tags?: Array<$Tag>;
   externalDocs?: $ExternalDocs;
 };
