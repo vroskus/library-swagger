@@ -24,8 +24,8 @@ import {
 } from './types';
 
 export type $SwaggerConfig = {
-  swaggerDefinition: $SwaggerDefinition;
   apis: $SwaggerFilePaths;
+  swaggerDefinition: $SwaggerDefinition;
 };
 
 // adaptSwaggerSpecToMultiRoute private method

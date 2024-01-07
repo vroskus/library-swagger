@@ -1,6 +1,6 @@
 export type $Server = {
-  url: string;
   description?: string;
+  url: string;
   variables?: unknown;
 };
 
@@ -9,8 +9,8 @@ export type $SwaggerSpec = {
     title: string;
     version: string;
   };
-  servers: Array<$Server>;
   openapi: string;
+  servers: Array<$Server>;
 };
 
 export type $ExternalDocs = {
@@ -19,26 +19,26 @@ export type $ExternalDocs = {
 };
 
 export type $Tag = {
-  name: string;
   description?: string;
   externalDocs?: $ExternalDocs;
+  name: string;
 };
 
 export type $SwaggerDefinition = {
-  info?: {
-    title?: string;
-    version?: string;
-    description?: string;
-  };
-  servers?: Array<$Server>;
-  openapi?: string;
-  swagger?: string;
   components?: {
     securitySchemes?: Record<string, unknown>;
   };
-  security?: Array<Record<string, unknown>>;
-  tags?: Array<$Tag>;
   externalDocs?: $ExternalDocs;
+  info?: {
+    description?: string;
+    title?: string;
+    version?: string;
+  };
+  openapi?: string;
+  security?: Array<Record<string, unknown>>;
+  servers?: Array<$Server>;
+  swagger?: string;
+  tags?: Array<$Tag>;
 };
 
 export type $SwaggerFilePaths = Array<string>;
