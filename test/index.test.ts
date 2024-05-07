@@ -11,25 +11,29 @@ import swaggerUIRouter, {
   assembleSwaggerConfig,
 } from '../src';
 
+// Types
+type $Layer = {
+  route?: {
+    path: string,
+  },
+};
+
 // Searches for a path in router
 const endpointIsSet = (router: $Router, endpoint: string): boolean => {
-  const layers: Array<{
-    route?: {
-      path: string,
-    },
-  }> = _.get(
+  const layers: Array<$Layer> = _.get(
     router,
     'stack',
   );
 
-  return _.find(
+  const foundLayer = _.find(
     layers,
-    (layer) => _.get(
+    (layer: $Layer) => _.get(
       layer,
       'route.path',
     ) === endpoint,
-    null,
-  ) !== null;
+  ) as $Layer | undefined;
+
+  return typeof foundLayer !== 'undefined';
 };
 
 describe(
@@ -63,11 +67,11 @@ describe(
     it(
       'should set a json endpoint',
       () => {
-        const endpoint = '/api-docs';
+        const endpoint = '/api-docs/swagger.json';
 
         router = swaggerUIRouter(
           router,
-          `${endpoint}/swagger.json`,
+          endpoint,
           mockApis,
         );
 
