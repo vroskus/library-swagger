@@ -14,8 +14,8 @@ import swaggerUIRouter, {
 // Types
 type $Layer = {
   route?: {
-    path: string,
-  },
+    path: string;
+  };
 };
 
 // Searches for a path in router

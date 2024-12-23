@@ -1,21 +1,15 @@
+/* eslint-disable perfectionist/sort-modules */
+export type $ExternalDocs = {
+  description?: string;
+  url: string;
+};
+
+export type $MultiRouteMode = 'root' | 'subpath';
+
 export type $Server = {
   description?: string;
   url: string;
   variables?: unknown;
-};
-
-export type $SwaggerSpec = {
-  info: {
-    title: string;
-    version: string;
-  };
-  openapi: string;
-  servers: Array<$Server>;
-};
-
-export type $ExternalDocs = {
-  description?: string;
-  url: string;
 };
 
 export type $Tag = {
@@ -43,4 +37,11 @@ export type $SwaggerDefinition = {
 
 export type $SwaggerFilePaths = Array<string>;
 
-export type $MultiRouteMode = 'root' | 'subpath';
+export type $SwaggerSpec = {
+  info: {
+    title: string;
+    version: string;
+  };
+  openapi: string;
+  servers: Array<$Server>;
+};
