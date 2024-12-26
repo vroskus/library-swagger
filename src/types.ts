@@ -1,4 +1,3 @@
-/* eslint-disable perfectionist/sort-modules */
 export type $ExternalDocs = {
   description?: string;
   url: string;
