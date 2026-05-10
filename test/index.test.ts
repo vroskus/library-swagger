@@ -39,7 +39,9 @@ const endpointIsSet = (router: $Router, endpoint: string): boolean => {
 describe(
   'swaggerUI-router',
   () => {
-    const mockApis = ['./src/routes/**/*.js'];
+    const mockApis = [
+      './src/routes/**/*.js',
+    ];
     let router: $Router;
 
     beforeEach(() => {
@@ -111,11 +113,15 @@ describe(
                   securitySchemes: {
                   },
                 },
-                security: [],
-                servers: [{
-                  url: '/v1.0',
-                }],
-                tags: [],
+                security: [
+                ],
+                servers: [
+                  {
+                    url: '/v1.0',
+                  },
+                ],
+                tags: [
+                ],
               },
             );
 
