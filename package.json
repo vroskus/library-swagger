@@ -25,18 +25,18 @@
   "dependencies": {
     "@types/express": "^5.0.6",
     "lodash": "^4.18.1",
-    "swagger-jsdoc": "^6.2.8",
+    "swagger-jsdoc": "^6.3.0",
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/lodash": "^4.17.24",
-    "@types/node": "^25.6.2",
-    "@vroskus/eslint-config": "^1.1.3",
+    "@types/node": "^25.9.3",
+    "@vroskus/eslint-config": "^1.1.4",
     "express": "^5.2.1",
     "jest": "^30.4.2",
     "jest-coverage-thresholds-bumper": "^1.1.0",
-    "ts-jest": "^29.4.9",
+    "ts-jest": "^29.4.11",
     "typescript": "^6.0.3"
   },
   "jest": {
